@@ -63,8 +63,35 @@ genome[index,]
 
 # Data shows rs2482705 (NFIL3) = GG  this is homozyus normal too, so no mutation here.
 
-# Data shows rs3828057 (RORC) =  CT (Referance genotype is CC, to heterozygus mutation to T here, which would appear to be quite common in Europeans)
+# Data shows rs3828057 (RORC) =  CT (Referance genotype is CC, to heterozygus
+# mutation to T here, which would appear to be quite common in Europeans)
 
+# RORC 
+# http://grch37.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000143365;r=1:151778547-151804348
+# Chromosome 1: 151,778,547-151,804,348
+head(genome)
+RORC <- genome[genome$position %in% 151804348:151778547 & genome$chromosome == 1, ]
 
+# Results in ensembl account only one variant here which is the intron variant
+# which is unlikely to do anything.
 
+# BHLHE40
+# http://grch37.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000134107;r=3:5020801-5027008
+# chr 3 5020801 5027008
+BHLHE40 <- genome[genome$position %in% 5020801:5027008 & genome$chromosome == 3, ]
+BHLHE40
+# Only 1 SNP probe here we've already figured out this was homozygous referance
+# so nothing to analyse.
 
+# NFIL3
+# http://grch37.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000165030;r=9:94171327-94186144;t=ENST00000297689
+# chr 9 94171327 94186144
+NFIL3 <- genome[genome$position %in% 94171327:94186144 & genome$chromosome == 9,]
+NFIL3
+
+# Both alternative AG and GT heterozygous genotypes here are intron
+# variants so unlikley to have any effect on coding protein, both have quite
+# high frequency in european population. 
+
+# looked at all variants in study and only mutations present were intron which are common in population
+# No exon mutations present in these variants
