@@ -1,5 +1,7 @@
 # Link to study https://synapse.koreamed.org/DOIx.php?id=10.4306/pi.2014.11.4.345
 
+getwd()
+setwd("~/Downloads")
 genome <- read.table("genome_v4_Full_20170111084212.txt")
 
 #add dataframe column names 
@@ -35,7 +37,7 @@ genome[index,]
 #     Total         | 42 (68%) | 18(29%) | 2(3%)   | 62 (100%)
 
 # Data shows rs908078 (BHLHE40) =  TT 
-
+# TT is homozygous normal, therefore not indicative of anything
 
 #---
 # Contingency tables taken from 
@@ -59,8 +61,9 @@ genome[index,]
 
 # Study concludes that minor (A) alleles were more common among controls than DSPS cases. 
 
-# Data shows rs2482705 (NFIL3) = GG
-# Data shows rs3828057 (RORC) =  CT
+# Data shows rs2482705 (NFIL3) = GG  this is homozyus normal too, so no mutation here.
+
+# Data shows rs3828057 (RORC) =  CT (Referance genotype is CC, to heterozygus mutation to T here, which would appear to be quite common in Europeans)
 
 
 
